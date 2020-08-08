@@ -1,11 +1,15 @@
 import React from 'react';
-import { DatePickerComponent } from '@syncfusion/ej2-react-calendars';
 import './App.css';
+import MyDatePicker from './MyDatePicker/MyDatePicker'
+
+function onChange(timestamp) {
+  console.log(timestamp);
+}
 
 function App() {
   return (
     <div className="App">
-     <DatePickerComponent id="datepicker" placeholder="Enter date"/>;
+      <MyDatePicker onChange={onChange}/>
     </div>
   );
 }
